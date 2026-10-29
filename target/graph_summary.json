@@ -1,0 +1,1 @@
+{"_invocation_id": "14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1", "linked": {"0": {"name": "model.industrial_quality.stg_production_events", "type": "model", "succ": [1]}, "1": {"name": "model.industrial_quality.daily_quality_metrics", "type": "model"}}}

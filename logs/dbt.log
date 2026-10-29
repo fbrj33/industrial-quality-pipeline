@@ -1,0 +1,1228 @@
+[0m23:21:40.318410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE80FD6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE50B6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE9387B10>]}
+
+
+============================== 23:21:40.322742 | ffdccab1-402b-4cf2-a55f-f7ec7c6656b8 ==============================
+[0m23:21:40.322742 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:21:40.323345 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'invocation_command': 'dbt init dbt_project', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:21:40.342253 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\farah\.dbt
+[0m23:21:40.344794 [debug] [MainThread]: Starter project path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Lib\site-packages\dbt\include\starter_project
+[0m23:21:40.358326 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:21:40.358986 [info ] [MainThread]: Setting up your profile.
+[0m23:23:41.413738 [info ] [MainThread]: Profile dbt_project written to C:\Users\farah\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:23:41.415134 [debug] [MainThread]: Command `dbt init` succeeded at 23:23:41.414994 after 121.23 seconds
+[0m23:23:41.415499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE940F6F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE93DE8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE9212E00>]}
+[0m23:23:41.415908 [debug] [MainThread]: Flushing usage events
+[0m23:23:44.606752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:23:58.383687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E60C15D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E6090E6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E60D3F7B10>]}
+
+
+============================== 23:23:58.387631 | 35a22bd3-9d25-4137-88a3-6000b3ba169d ==============================
+[0m23:23:58.387631 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:23:58.388202 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:23:58.401916 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:23:58.402974 [info ] [MainThread]: python version: 3.13.4
+[0m23:23:58.403346 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:23:58.403727 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:23:58.455117 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:23:58.455854 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:23:58.456245 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:23:58.457067 [info ] [MainThread]: adapter type: postgres
+[0m23:23:58.457376 [info ] [MainThread]: adapter version: 1.11.0
+[0m23:23:58.457741 [info ] [MainThread]: Configuration:
+[0m23:23:58.458006 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:23:58.458226 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:23:58.458429 [info ] [MainThread]: Required dependencies:
+[0m23:23:58.458642 [debug] [MainThread]: Executing "git --help"
+[0m23:23:58.496569 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:23:58.496971 [debug] [MainThread]: STDERR: "b''"
+[0m23:23:58.497356 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:23:58.497792 [info ] [MainThread]: Connection:
+[0m23:23:58.498112 [info ] [MainThread]:   host: localhost
+[0m23:23:58.498442 [info ] [MainThread]:   port: 5432
+[0m23:23:58.498772 [info ] [MainThread]:   user: quality_user
+[0m23:23:58.499124 [info ] [MainThread]:   database: qualiy_db
+[0m23:23:58.499423 [info ] [MainThread]:   schema: analytics
+[0m23:23:58.499729 [info ] [MainThread]:   connect_timeout: 10
+[0m23:23:58.500022 [info ] [MainThread]:   role: None
+[0m23:23:58.500305 [info ] [MainThread]:   search_path: None
+[0m23:23:58.500601 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:23:58.500883 [info ] [MainThread]:   sslmode: None
+[0m23:23:58.501175 [info ] [MainThread]:   sslcert: None
+[0m23:23:58.501436 [info ] [MainThread]:   sslkey: None
+[0m23:23:58.501697 [info ] [MainThread]:   sslrootcert: None
+[0m23:23:58.501935 [info ] [MainThread]:   application_name: dbt
+[0m23:23:58.502156 [info ] [MainThread]:   autocommit: False
+[0m23:23:58.502358 [info ] [MainThread]:   retries: 1
+[0m23:23:58.502789 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:23:58.674272 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:23:58.716297 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:23:58.716674 [debug] [MainThread]: On debug: select 1 as id
+[0m23:23:58.716876 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:23:58.772006 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m23:23:58.907755 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:23:58.908155 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:23:58.908454 [debug] [MainThread]: On debug: No close available on handle
+[0m23:23:58.908847 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:23:58.909519 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:23:58.910060 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml> not found
+
+[0m23:23:58.910606 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:23:58.911528 [debug] [MainThread]: Command `dbt debug` failed at 23:23:58.911415 after 0.66 seconds
+[0m23:23:58.911802 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:23:58.912032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E60E959A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E60E94AF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E60D48AF10>]}
+[0m23:23:58.912296 [debug] [MainThread]: Flushing usage events
+[0m23:24:00.805106 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:24:14.809605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF5486D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF51806FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF55B07B10>]}
+
+
+============================== 23:24:14.812887 | 4c55d209-88a3-46ed-9005-2da1230d5637 ==============================
+[0m23:24:14.812887 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:24:14.813430 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init dbt_project', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:24:14.825441 [info ] [MainThread]: A project called dbt_project already exists here.
+[0m23:24:14.826363 [debug] [MainThread]: Command `dbt init` succeeded at 23:24:14.826252 after 0.14 seconds
+[0m23:24:14.826731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF55B85480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF55B5E8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF55996E00>]}
+[0m23:24:14.827043 [debug] [MainThread]: Flushing usage events
+[0m23:24:16.652870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:29:49.775654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB758AD6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB72836FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB76B47B10>]}
+
+
+============================== 23:29:49.779087 | 1ac89fac-8bb1-4d37-b7f4-069a545b4596 ==============================
+[0m23:29:49.779087 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:29:49.779723 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:29:49.792260 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:29:49.792748 [info ] [MainThread]: python version: 3.13.4
+[0m23:29:49.793177 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:29:49.793455 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:29:49.840655 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:29:49.841190 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:29:49.841487 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:29:49.842198 [info ] [MainThread]: adapter type: postgres
+[0m23:29:49.842468 [info ] [MainThread]: adapter version: 1.11.0
+[0m23:29:49.843167 [info ] [MainThread]: Configuration:
+[0m23:29:49.843432 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:29:49.843658 [info ] [MainThread]:   dbt_project.yml file [[31mERROR invalid[0m]
+[0m23:29:49.843860 [info ] [MainThread]: Required dependencies:
+[0m23:29:49.844094 [debug] [MainThread]: Executing "git --help"
+[0m23:29:49.879499 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:29:49.879934 [debug] [MainThread]: STDERR: "b''"
+[0m23:29:49.880266 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:29:49.880606 [info ] [MainThread]: Connection:
+[0m23:29:49.880984 [info ] [MainThread]:   host: localhost
+[0m23:29:49.881259 [info ] [MainThread]:   port: 5432
+[0m23:29:49.881530 [info ] [MainThread]:   user: quality_user
+[0m23:29:49.881764 [info ] [MainThread]:   database: qualiy_db
+[0m23:29:49.881987 [info ] [MainThread]:   schema: analytics
+[0m23:29:49.882312 [info ] [MainThread]:   connect_timeout: 10
+[0m23:29:49.882582 [info ] [MainThread]:   role: None
+[0m23:29:49.882796 [info ] [MainThread]:   search_path: None
+[0m23:29:49.883069 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:29:49.883289 [info ] [MainThread]:   sslmode: None
+[0m23:29:49.883534 [info ] [MainThread]:   sslcert: None
+[0m23:29:49.883737 [info ] [MainThread]:   sslkey: None
+[0m23:29:49.883925 [info ] [MainThread]:   sslrootcert: None
+[0m23:29:49.884169 [info ] [MainThread]:   application_name: dbt
+[0m23:29:49.884423 [info ] [MainThread]:   autocommit: False
+[0m23:29:49.884657 [info ] [MainThread]:   retries: 1
+[0m23:29:49.885075 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:29:50.051945 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:29:50.098111 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:29:50.098455 [debug] [MainThread]: On debug: select 1 as id
+[0m23:29:50.098675 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:29:50.134391 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m23:29:50.164453 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:29:50.164947 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:29:50.165268 [debug] [MainThread]: On debug: No close available on handle
+[0m23:29:50.165503 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:29:50.165902 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:29:50.166285 [info ] [MainThread]: Project loading failed for the following reason:
+Runtime Error
+  dbt_project.yml does not parse to a dictionary
+
+
+[0m23:29:50.166600 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:29:50.167270 [debug] [MainThread]: Command `dbt debug` failed at 23:29:50.167174 after 0.52 seconds
+[0m23:29:50.167527 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:29:50.167764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB78149A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB7813AF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AB76BDAF10>]}
+[0m23:29:50.168033 [debug] [MainThread]: Flushing usage events
+[0m23:29:52.550947 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:35:24.279510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF906D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF6076FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADFA2F7B10>]}
+
+
+============================== 23:35:24.282709 | 264c879b-6a9a-4341-9224-e57f9fa20f68 ==============================
+[0m23:35:24.282709 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:35:24.283196 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m23:35:24.294495 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:35:24.294987 [info ] [MainThread]: python version: 3.13.4
+[0m23:35:24.295323 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:35:24.295645 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:35:24.298143 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:35:24.298491 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:35:24.298716 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:35:24.377314 [info ] [MainThread]: Configuration:
+[0m23:35:24.377881 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m23:35:24.378342 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:35:24.378846 [info ] [MainThread]: Required dependencies:
+[0m23:35:24.379337 [debug] [MainThread]: Executing "git --help"
+[0m23:35:24.423908 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:35:24.424351 [debug] [MainThread]: STDERR: "b''"
+[0m23:35:24.424678 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:35:24.425055 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m23:35:24.425439 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:35:24.425691 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Could not find profile named 'industrial_quality'
+
+
+[0m23:35:24.426442 [debug] [MainThread]: Command `dbt debug` failed at 23:35:24.426342 after 0.30 seconds
+[0m23:35:24.426724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADF9735220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADFB81DEB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ADFA38AE00>]}
+[0m23:35:24.427013 [debug] [MainThread]: Flushing usage events
+[0m23:35:27.270901 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:36:17.353631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000137D35DD6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000137D0556FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000137D4877B10>]}
+
+
+============================== 23:36:17.356765 | 99ffc581-f797-4519-a96e-a30452d07822 ==============================
+[0m23:36:17.356765 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:36:17.357267 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m23:36:17.367881 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:36:17.368378 [info ] [MainThread]: python version: 3.13.4
+[0m23:36:17.368710 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:36:17.369083 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:36:17.371770 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:36:17.372253 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:36:17.372621 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:36:17.454206 [info ] [MainThread]: Configuration:
+[0m23:36:17.454774 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m23:36:17.455156 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:36:17.455398 [info ] [MainThread]: Required dependencies:
+[0m23:36:17.455645 [debug] [MainThread]: Executing "git --help"
+[0m23:36:17.501768 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:36:17.502323 [debug] [MainThread]: STDERR: "b''"
+[0m23:36:17.502649 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:36:17.502954 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m23:36:17.503216 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:36:17.503534 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Could not find profile named 'industrial_quality'
+
+
+[0m23:36:17.504270 [debug] [MainThread]: Command `dbt debug` failed at 23:36:17.504158 after 0.26 seconds
+[0m23:36:17.504542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000137D3CB5220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000137D5DADEB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000137D490AE00>]}
+[0m23:36:17.504811 [debug] [MainThread]: Flushing usage events
+[0m23:36:19.438070 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:38:17.919722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CEFD27D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CEFA256FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CEFE507B10>]}
+
+
+============================== 23:38:17.923322 | 6789d0a4-cfc7-4fed-8525-ac276bde24e9 ==============================
+[0m23:38:17.923322 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:38:17.923960 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m23:38:17.935803 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:38:17.936361 [info ] [MainThread]: python version: 3.13.4
+[0m23:38:17.936744 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:38:17.937053 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:38:17.979439 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:38:17.980073 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:38:17.980499 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:38:17.981237 [info ] [MainThread]: adapter type: postgres
+[0m23:38:17.981511 [info ] [MainThread]: adapter version: 1.11.0
+[0m23:38:18.054100 [info ] [MainThread]: Configuration:
+[0m23:38:18.054649 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:38:18.055061 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:38:18.055308 [info ] [MainThread]: Required dependencies:
+[0m23:38:18.055558 [debug] [MainThread]: Executing "git --help"
+[0m23:38:18.098393 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:38:18.098852 [debug] [MainThread]: STDERR: "b''"
+[0m23:38:18.099218 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:38:18.099607 [info ] [MainThread]: Connection:
+[0m23:38:18.100017 [info ] [MainThread]:   host: localhost
+[0m23:38:18.100331 [info ] [MainThread]:   port: 5432
+[0m23:38:18.100597 [info ] [MainThread]:   user: quality_user
+[0m23:38:18.100828 [info ] [MainThread]:   database: quality_db
+[0m23:38:18.101050 [info ] [MainThread]:   schema: analytics
+[0m23:38:18.101400 [info ] [MainThread]:   connect_timeout: 10
+[0m23:38:18.101720 [info ] [MainThread]:   role: None
+[0m23:38:18.101997 [info ] [MainThread]:   search_path: None
+[0m23:38:18.102221 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:38:18.102426 [info ] [MainThread]:   sslmode: None
+[0m23:38:18.102630 [info ] [MainThread]:   sslcert: None
+[0m23:38:18.102852 [info ] [MainThread]:   sslkey: None
+[0m23:38:18.103072 [info ] [MainThread]:   sslrootcert: None
+[0m23:38:18.103287 [info ] [MainThread]:   application_name: dbt
+[0m23:38:18.103515 [info ] [MainThread]:   autocommit: False
+[0m23:38:18.103759 [info ] [MainThread]:   retries: 1
+[0m23:38:18.104218 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:38:18.272761 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:38:18.310632 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:38:18.310962 [debug] [MainThread]: On debug: select 1 as id
+[0m23:38:18.311159 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:38:18.451793 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m23:38:18.486803 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:38:18.487128 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:38:18.487368 [debug] [MainThread]: On debug: No close available on handle
+[0m23:38:18.487613 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:38:18.487965 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:38:18.488306 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:38:18.489000 [debug] [MainThread]: Command `dbt debug` failed at 23:38:18.488908 after 0.69 seconds
+[0m23:38:18.489226 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:38:18.489442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE80048510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE8013A210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CEFE59A140>]}
+[0m23:38:18.489696 [debug] [MainThread]: Flushing usage events
+[0m23:38:20.914160 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:39:33.116829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719530D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719658F4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719658FB10>]}
+
+
+============================== 23:39:33.120396 | b23f4810-59d0-4166-9252-a7ad261c2859 ==============================
+[0m23:39:33.120396 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:39:33.120918 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m23:39:33.133455 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:39:33.134115 [info ] [MainThread]: python version: 3.13.4
+[0m23:39:33.134643 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:39:33.135220 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:39:33.136054 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Syntax error near line 10
+  ------------------------------
+  7  |       port: 5432
+  8  |       user: quality_user
+  9  |       password:local_dev_password
+  10 |       dbname: quality_db
+  11 |       schema: analytics
+  12 |       threads: 4
+  
+  Raw Error:
+  ------------------------------
+  while scanning a simple key
+    in "<unicode string>", line 9, column 7
+  could not find expected ':'
+    in "<unicode string>", line 10, column 7
+[0m23:39:33.137337 [debug] [MainThread]: Command `dbt debug` failed at 23:39:33.137018 after 0.10 seconds
+[0m23:39:33.138118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000271964368B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027196433650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027196423020>]}
+[0m23:39:33.138723 [debug] [MainThread]: Flushing usage events
+[0m23:39:35.718233 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:40:11.909336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A02A8D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A7FB06FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A03D27B10>]}
+
+
+============================== 23:40:11.913026 | b8472ace-2b78-4898-ab69-a28911ac3950 ==============================
+[0m23:40:11.913026 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:40:11.913624 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m23:40:11.926353 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:40:11.926907 [info ] [MainThread]: python version: 3.13.4
+[0m23:40:11.927249 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:40:11.927578 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:40:11.974241 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:40:11.974706 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:40:11.975079 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:40:11.975821 [info ] [MainThread]: adapter type: postgres
+[0m23:40:11.976169 [info ] [MainThread]: adapter version: 1.11.0
+[0m23:40:12.054098 [info ] [MainThread]: Configuration:
+[0m23:40:12.054665 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:40:12.055078 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:40:12.055328 [info ] [MainThread]: Required dependencies:
+[0m23:40:12.055585 [debug] [MainThread]: Executing "git --help"
+[0m23:40:12.098390 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:40:12.098799 [debug] [MainThread]: STDERR: "b''"
+[0m23:40:12.099116 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:40:12.099490 [info ] [MainThread]: Connection:
+[0m23:40:12.099813 [info ] [MainThread]:   host: localhost
+[0m23:40:12.100097 [info ] [MainThread]:   port: 5432
+[0m23:40:12.100383 [info ] [MainThread]:   user: quality_user
+[0m23:40:12.100644 [info ] [MainThread]:   database: quality_db
+[0m23:40:12.101134 [info ] [MainThread]:   schema: analytics
+[0m23:40:12.101451 [info ] [MainThread]:   connect_timeout: 10
+[0m23:40:12.101724 [info ] [MainThread]:   role: None
+[0m23:40:12.101969 [info ] [MainThread]:   search_path: None
+[0m23:40:12.102216 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:40:12.102480 [info ] [MainThread]:   sslmode: None
+[0m23:40:12.102721 [info ] [MainThread]:   sslcert: None
+[0m23:40:12.102955 [info ] [MainThread]:   sslkey: None
+[0m23:40:12.103184 [info ] [MainThread]:   sslrootcert: None
+[0m23:40:12.103408 [info ] [MainThread]:   application_name: dbt
+[0m23:40:12.103633 [info ] [MainThread]:   autocommit: False
+[0m23:40:12.103863 [info ] [MainThread]:   retries: 1
+[0m23:40:12.104306 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:40:12.268228 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:40:12.311870 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:40:12.312235 [debug] [MainThread]: On debug: select 1 as id
+[0m23:40:12.312458 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:40:12.351384 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m23:40:12.504873 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:40:12.505287 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:40:12.505555 [debug] [MainThread]: On debug: No close available on handle
+[0m23:40:12.505751 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:40:12.506079 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:40:12.506405 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:40:12.507178 [debug] [MainThread]: Command `dbt debug` failed at 23:40:12.507086 after 0.72 seconds
+[0m23:40:12.507402 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:40:12.507622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A052D8510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A053CA210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A03DBA140>]}
+[0m23:40:12.507915 [debug] [MainThread]: Flushing usage events
+[0m23:40:15.025718 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:41:37.270581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001582D19D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001582A196FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001582E427B10>]}
+
+
+============================== 23:41:37.273909 | 65699a3c-a6d3-4e07-9d8f-da0e4270c06c ==============================
+[0m23:41:37.273909 [info ] [MainThread]: Running with dbt=1.11.16
+[0m23:41:37.274520 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m23:41:37.285628 [info ] [MainThread]: dbt version: 1.11.16
+[0m23:41:37.286094 [info ] [MainThread]: python version: 3.13.4
+[0m23:41:37.286370 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m23:41:37.286645 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:41:37.332342 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m23:41:37.332789 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m23:41:37.333105 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m23:41:37.333752 [info ] [MainThread]: adapter type: postgres
+[0m23:41:37.334074 [info ] [MainThread]: adapter version: 1.11.0
+[0m23:41:37.416432 [info ] [MainThread]: Configuration:
+[0m23:41:37.417018 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:41:37.417420 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:41:37.417686 [info ] [MainThread]: Required dependencies:
+[0m23:41:37.417988 [debug] [MainThread]: Executing "git --help"
+[0m23:41:37.459458 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:41:37.459896 [debug] [MainThread]: STDERR: "b''"
+[0m23:41:37.460221 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:41:37.460523 [info ] [MainThread]: Connection:
+[0m23:41:37.460848 [info ] [MainThread]:   host: localhost
+[0m23:41:37.461212 [info ] [MainThread]:   port: 5432
+[0m23:41:37.461517 [info ] [MainThread]:   user: quality_user
+[0m23:41:37.461817 [info ] [MainThread]:   database: quality_db
+[0m23:41:37.462110 [info ] [MainThread]:   schema: analytics
+[0m23:41:37.462378 [info ] [MainThread]:   connect_timeout: 10
+[0m23:41:37.462636 [info ] [MainThread]:   role: None
+[0m23:41:37.462899 [info ] [MainThread]:   search_path: None
+[0m23:41:37.463152 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:41:37.463389 [info ] [MainThread]:   sslmode: None
+[0m23:41:37.463642 [info ] [MainThread]:   sslcert: None
+[0m23:41:37.463884 [info ] [MainThread]:   sslkey: None
+[0m23:41:37.464142 [info ] [MainThread]:   sslrootcert: None
+[0m23:41:37.464428 [info ] [MainThread]:   application_name: dbt
+[0m23:41:37.464673 [info ] [MainThread]:   autocommit: False
+[0m23:41:37.464928 [info ] [MainThread]:   retries: 1
+[0m23:41:37.465386 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:41:37.646760 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:41:37.686338 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:41:37.686634 [debug] [MainThread]: On debug: select 1 as id
+[0m23:41:37.686829 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:41:37.720769 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m23:41:37.859828 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:41:37.860188 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:41:37.860428 [debug] [MainThread]: On debug: No close available on handle
+[0m23:41:37.860642 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:41:37.861047 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:41:37.861484 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:41:37.862298 [debug] [MainThread]: Command `dbt debug` failed at 23:41:37.862191 after 0.72 seconds
+[0m23:41:37.862564 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:41:37.862866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001582FA08510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001582FAFA210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001582E4BA140>]}
+[0m23:41:37.863202 [debug] [MainThread]: Flushing usage events
+[0m23:41:40.521366 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:02:54.733843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002055261D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002054F5E6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205538C7B10>]}
+
+
+============================== 00:02:54.737275 | 4eb2ba23-93f3-4481-b825-990ebf842e96 ==============================
+[0m00:02:54.737275 [info ] [MainThread]: Running with dbt=1.11.16
+[0m00:02:54.737854 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m00:02:54.753865 [info ] [MainThread]: dbt version: 1.11.16
+[0m00:02:54.754339 [info ] [MainThread]: python version: 3.13.4
+[0m00:02:54.754659 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m00:02:54.754993 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:02:54.803197 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m00:02:54.803832 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m00:02:54.804272 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m00:02:54.804961 [info ] [MainThread]: adapter type: postgres
+[0m00:02:54.805259 [info ] [MainThread]: adapter version: 1.11.0
+[0m00:02:54.881690 [info ] [MainThread]: Configuration:
+[0m00:02:54.882439 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:02:54.882894 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:02:54.883163 [info ] [MainThread]: Required dependencies:
+[0m00:02:54.883438 [debug] [MainThread]: Executing "git --help"
+[0m00:02:54.922378 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:02:54.922780 [debug] [MainThread]: STDERR: "b''"
+[0m00:02:54.923085 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:02:54.923475 [info ] [MainThread]: Connection:
+[0m00:02:54.923780 [info ] [MainThread]:   host: localhost
+[0m00:02:54.924022 [info ] [MainThread]:   port: 5432
+[0m00:02:54.924238 [info ] [MainThread]:   user: quality_user
+[0m00:02:54.924443 [info ] [MainThread]:   database: quality_db
+[0m00:02:54.924642 [info ] [MainThread]:   schema: analytics
+[0m00:02:54.924848 [info ] [MainThread]:   connect_timeout: 10
+[0m00:02:54.925127 [info ] [MainThread]:   role: None
+[0m00:02:54.925387 [info ] [MainThread]:   search_path: None
+[0m00:02:54.925594 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:02:54.925783 [info ] [MainThread]:   sslmode: None
+[0m00:02:54.925984 [info ] [MainThread]:   sslcert: None
+[0m00:02:54.926187 [info ] [MainThread]:   sslkey: None
+[0m00:02:54.926377 [info ] [MainThread]:   sslrootcert: None
+[0m00:02:54.926558 [info ] [MainThread]:   application_name: dbt
+[0m00:02:54.926738 [info ] [MainThread]:   autocommit: False
+[0m00:02:54.926936 [info ] [MainThread]:   retries: 1
+[0m00:02:54.927341 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:02:55.087520 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:02:55.124827 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:02:55.125112 [debug] [MainThread]: On debug: select 1 as id
+[0m00:02:55.125301 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:02:55.162155 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m00:02:55.189092 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m00:02:55.189413 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m00:02:55.189639 [debug] [MainThread]: On debug: No close available on handle
+[0m00:02:55.189833 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m00:02:55.190129 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:02:55.190413 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:02:55.191203 [debug] [MainThread]: Command `dbt debug` failed at 00:02:55.191106 after 0.59 seconds
+[0m00:02:55.191441 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:02:55.191662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020553AF8510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020554F8A210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002055394A140>]}
+[0m00:02:55.191917 [debug] [MainThread]: Flushing usage events
+[0m00:02:56.864273 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:04:34.843996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE4DB4D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE4AAF6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE4EDD7B10>]}
+
+
+============================== 00:04:34.847086 | 6372207d-00cb-483a-927f-b61bb37bb44d ==============================
+[0m00:04:34.847086 [info ] [MainThread]: Running with dbt=1.11.16
+[0m00:04:34.847569 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m00:04:34.858478 [info ] [MainThread]: dbt version: 1.11.16
+[0m00:04:34.859039 [info ] [MainThread]: python version: 3.13.4
+[0m00:04:34.859426 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m00:04:34.859688 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:04:34.906786 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m00:04:34.907323 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m00:04:34.907675 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m00:04:34.908496 [info ] [MainThread]: adapter type: postgres
+[0m00:04:34.908867 [info ] [MainThread]: adapter version: 1.11.0
+[0m00:04:34.990776 [info ] [MainThread]: Configuration:
+[0m00:04:34.991405 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:04:34.991882 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:04:34.992380 [info ] [MainThread]: Required dependencies:
+[0m00:04:34.992690 [debug] [MainThread]: Executing "git --help"
+[0m00:04:35.039463 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:04:35.039942 [debug] [MainThread]: STDERR: "b''"
+[0m00:04:35.040283 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:04:35.040702 [info ] [MainThread]: Connection:
+[0m00:04:35.041081 [info ] [MainThread]:   host: localhost
+[0m00:04:35.041401 [info ] [MainThread]:   port: 5432
+[0m00:04:35.041678 [info ] [MainThread]:   user: quality_user
+[0m00:04:35.041936 [info ] [MainThread]:   database: quality_db
+[0m00:04:35.042200 [info ] [MainThread]:   schema: analytics
+[0m00:04:35.042556 [info ] [MainThread]:   connect_timeout: 10
+[0m00:04:35.042812 [info ] [MainThread]:   role: None
+[0m00:04:35.043035 [info ] [MainThread]:   search_path: None
+[0m00:04:35.043297 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:04:35.043562 [info ] [MainThread]:   sslmode: None
+[0m00:04:35.043807 [info ] [MainThread]:   sslcert: None
+[0m00:04:35.044044 [info ] [MainThread]:   sslkey: None
+[0m00:04:35.044302 [info ] [MainThread]:   sslrootcert: None
+[0m00:04:35.044613 [info ] [MainThread]:   application_name: dbt
+[0m00:04:35.044895 [info ] [MainThread]:   autocommit: False
+[0m00:04:35.045155 [info ] [MainThread]:   retries: 1
+[0m00:04:35.045618 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:04:35.217007 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:04:35.257865 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:04:35.258290 [debug] [MainThread]: On debug: select 1 as id
+[0m00:04:35.258477 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:04:35.402595 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+
+[0m00:04:35.436835 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m00:04:35.437228 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m00:04:35.437473 [debug] [MainThread]: On debug: No close available on handle
+[0m00:04:35.437675 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m00:04:35.438033 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:04:35.438300 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "quality_user"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:04:35.439100 [debug] [MainThread]: Command `dbt debug` failed at 00:04:35.439004 after 0.72 seconds
+[0m00:04:35.439337 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:04:35.439564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE4FFE8510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE5047A210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BE4EE6A140>]}
+[0m00:04:35.439823 [debug] [MainThread]: Flushing usage events
+[0m00:04:37.175443 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:05:11.336444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3EC8FD6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3E98D6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3EDB87B10>]}
+
+
+============================== 00:05:11.339908 | b48657a1-872f-47e7-abab-df3b2e349d6a ==============================
+[0m00:05:11.339908 [info ] [MainThread]: Running with dbt=1.11.16
+[0m00:05:11.340484 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m00:05:11.351923 [info ] [MainThread]: dbt version: 1.11.16
+[0m00:05:11.352479 [info ] [MainThread]: python version: 3.13.4
+[0m00:05:11.352801 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m00:05:11.353157 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:05:11.355655 [info ] [MainThread]: target not specified in profile 'industrial_quality', using 'default'
+[0m00:05:11.356013 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m00:05:11.356255 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m00:05:11.356470 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m00:05:11.436988 [info ] [MainThread]: Configuration:
+[0m00:05:11.437679 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m00:05:11.438049 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:05:11.438319 [info ] [MainThread]: Required dependencies:
+[0m00:05:11.438581 [debug] [MainThread]: Executing "git --help"
+[0m00:05:11.480506 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:05:11.481126 [debug] [MainThread]: STDERR: "b''"
+[0m00:05:11.481537 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:05:11.482018 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m00:05:11.482355 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:05:11.482614 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  The profile 'industrial_quality' does not have a target named 'default'. The valid target names for this profile are:
+   - dev
+
+
+[0m00:05:11.483364 [debug] [MainThread]: Command `dbt debug` failed at 00:05:11.483254 after 0.28 seconds
+[0m00:05:11.483667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3ECFC5220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3EED61EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3EDC1F020>]}
+[0m00:05:11.483987 [debug] [MainThread]: Flushing usage events
+[0m00:05:12.871536 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:06:46.122158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029088A8D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029085A46FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029089D17B10>]}
+
+
+============================== 00:06:46.125611 | 1b8be1d5-b1bc-42df-8b0d-1b80faa18f0e ==============================
+[0m00:06:46.125611 [info ] [MainThread]: Running with dbt=1.11.16
+[0m00:06:46.126556 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m00:06:46.138528 [info ] [MainThread]: dbt version: 1.11.16
+[0m00:06:46.138999 [info ] [MainThread]: python version: 3.13.4
+[0m00:06:46.139365 [info ] [MainThread]: python path: C:\Users\farah\Documents\industrial-quality-pipeline\.venv\Scripts\python.exe
+[0m00:06:46.139712 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:06:46.186345 [info ] [MainThread]: Using profiles dir at C:\Users\farah\.dbt
+[0m00:06:46.186924 [info ] [MainThread]: Using profiles.yml file at C:\Users\farah\.dbt\profiles.yml
+[0m00:06:46.187324 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\farah\Documents\industrial-quality-pipeline\dbt_project.yml
+[0m00:06:46.188086 [info ] [MainThread]: adapter type: postgres
+[0m00:06:46.188391 [info ] [MainThread]: adapter version: 1.11.0
+[0m00:06:46.264707 [info ] [MainThread]: Configuration:
+[0m00:06:46.265140 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:06:46.265510 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:06:46.265867 [info ] [MainThread]: Required dependencies:
+[0m00:06:46.266300 [debug] [MainThread]: Executing "git --help"
+[0m00:06:46.305075 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:06:46.305451 [debug] [MainThread]: STDERR: "b''"
+[0m00:06:46.305747 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:06:46.306146 [info ] [MainThread]: Connection:
+[0m00:06:46.306439 [info ] [MainThread]:   host: localhost
+[0m00:06:46.306706 [info ] [MainThread]:   port: 5440
+[0m00:06:46.306988 [info ] [MainThread]:   user: quality_user
+[0m00:06:46.307311 [info ] [MainThread]:   database: quality_db
+[0m00:06:46.307576 [info ] [MainThread]:   schema: analytics
+[0m00:06:46.307873 [info ] [MainThread]:   connect_timeout: 10
+[0m00:06:46.308148 [info ] [MainThread]:   role: None
+[0m00:06:46.308455 [info ] [MainThread]:   search_path: None
+[0m00:06:46.308817 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:06:46.309109 [info ] [MainThread]:   sslmode: None
+[0m00:06:46.309357 [info ] [MainThread]:   sslcert: None
+[0m00:06:46.309639 [info ] [MainThread]:   sslkey: None
+[0m00:06:46.309917 [info ] [MainThread]:   sslrootcert: None
+[0m00:06:46.310228 [info ] [MainThread]:   application_name: dbt
+[0m00:06:46.310518 [info ] [MainThread]:   autocommit: False
+[0m00:06:46.310811 [info ] [MainThread]:   retries: 1
+[0m00:06:46.311309 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:06:46.489894 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:06:46.529608 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:06:46.529900 [debug] [MainThread]: On debug: select 1 as id
+[0m00:06:46.530092 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:06:46.559177 [debug] [MainThread]: SQL status: SELECT 1 in 0.029 seconds
+[0m00:06:46.559933 [debug] [MainThread]: On debug: Close
+[0m00:06:46.560260 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:06:46.560719 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:06:46.561503 [debug] [MainThread]: Command `dbt debug` succeeded at 00:06:46.561407 after 0.57 seconds
+[0m00:06:46.561728 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:06:46.561965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908B278510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908B36A9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029089DAA030>]}
+[0m00:06:46.562232 [debug] [MainThread]: Flushing usage events
+[0m00:06:49.703812 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:33:52.082733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F57A1D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F54A06FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F58CFFED0>]}
+
+
+============================== 00:33:52.086291 | 246dc502-5edb-46c4-a7d0-8de416c12206 ==============================
+[0m00:33:52.086291 [info ] [MainThread]: Running with dbt=1.11.16
+[0m00:33:52.086870 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m00:33:52.247067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F580E5220>]}
+[0m00:33:52.297155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F58D55AE0>]}
+[0m00:33:52.298265 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:33:52.473586 [debug] [MainThread]: checksum: 6775cc4f71c9acc0c7013aa05043ee74c024b5544edd0346634b66273284ee7f, vars: {}, profile: , target: , version: 1.11.16
+[0m00:33:52.474325 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m00:33:52.474793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F58E08F50>]}
+[0m00:33:53.178949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F58B398B0>]}
+[0m00:33:53.224663 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m00:33:53.228401 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m00:33:53.249079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5A81D010>]}
+[0m00:33:53.249499 [info ] [MainThread]: Found 1 model, 477 macros
+[0m00:33:53.249859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5A5B8EF0>]}
+[0m00:33:53.251483 [info ] [MainThread]: 
+[0m00:33:53.251971 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:33:53.252344 [info ] [MainThread]: 
+[0m00:33:53.252829 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:33:53.253714 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db'
+[0m00:33:53.313612 [debug] [ThreadPool]: Using postgres connection "list_quality_db"
+[0m00:33:53.313954 [debug] [ThreadPool]: On list_quality_db: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:33:53.314188 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:33:53.353545 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.039 seconds
+[0m00:33:53.354724 [debug] [ThreadPool]: On list_quality_db: Close
+[0m00:33:53.355458 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_quality_db, now create_quality_db_analytics)
+[0m00:33:53.355854 [debug] [ThreadPool]: Creating schema "database: "quality_db"
+schema: "analytics"
+"
+[0m00:33:53.359377 [debug] [ThreadPool]: Using postgres connection "create_quality_db_analytics"
+[0m00:33:53.359713 [debug] [ThreadPool]: On create_quality_db_analytics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "create_quality_db_analytics"} */
+create schema if not exists "analytics"
+[0m00:33:53.359960 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:33:53.377148 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.017 seconds
+[0m00:33:53.378895 [debug] [ThreadPool]: On create_quality_db_analytics: COMMIT
+[0m00:33:53.379478 [debug] [ThreadPool]: Using postgres connection "create_quality_db_analytics"
+[0m00:33:53.379766 [debug] [ThreadPool]: On create_quality_db_analytics: COMMIT
+[0m00:33:53.383055 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m00:33:53.383638 [debug] [ThreadPool]: On create_quality_db_analytics: Close
+[0m00:33:53.386428 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db_analytics'
+[0m00:33:53.394234 [debug] [ThreadPool]: Using postgres connection "list_quality_db_analytics"
+[0m00:33:53.394928 [debug] [ThreadPool]: On list_quality_db_analytics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db_analytics"} */
+select
+      'quality_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'quality_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m00:33:53.395287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:33:53.451966 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.057 seconds
+[0m00:33:53.452975 [debug] [ThreadPool]: On list_quality_db_analytics: ROLLBACK
+[0m00:33:53.453735 [debug] [ThreadPool]: On list_quality_db_analytics: Close
+[0m00:33:53.456719 [debug] [MainThread]: Using postgres connection "master"
+[0m00:33:53.457015 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:33:53.457251 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:33:53.484647 [debug] [MainThread]: SQL status: SELECT 0 in 0.027 seconds
+[0m00:33:53.485928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5A766090>]}
+[0m00:33:53.486652 [debug] [MainThread]: On master: ROLLBACK
+[0m00:33:53.487428 [debug] [MainThread]: On master: COMMIT
+[0m00:33:53.487677 [debug] [MainThread]: Using postgres connection "master"
+[0m00:33:53.487873 [debug] [MainThread]: On master: COMMIT
+[0m00:33:53.488695 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m00:33:53.488953 [debug] [MainThread]: On master: Close
+[0m00:33:53.500270 [debug] [Thread-1 (]: Began running node model.industrial_quality.stg_production_events
+[0m00:33:53.500844 [info ] [Thread-1 (]: 1 of 1 START sql view model analytics.stg_production_events .................... [RUN]
+[0m00:33:53.501444 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.industrial_quality.stg_production_events'
+[0m00:33:53.501745 [debug] [Thread-1 (]: Began compiling node model.industrial_quality.stg_production_events
+[0m00:33:53.505977 [debug] [Thread-1 (]: Writing injected SQL for node "model.industrial_quality.stg_production_events"
+[0m00:33:53.508197 [debug] [Thread-1 (]: Began executing node model.industrial_quality.stg_production_events
+[0m00:33:53.537339 [debug] [Thread-1 (]: Writing runtime sql for node "model.industrial_quality.stg_production_events"
+[0m00:33:53.539904 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:33:53.540314 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+
+  create view "quality_db"."analytics"."stg_production_events__dbt_tmp"
+    
+    
+  as (
+    SELECT
+event_id,
+event_timestamp,
+unit_id,
+
+sensor_060,
+sensor_104,
+sensor_130,
+sensor_029,
+sensor_511,
+sensor_317,
+sensor_125,
+sensor_126,
+
+quality_label,
+
+CASE
+   WHEN quality_label = -1 THEN 'pass'
+    WHEN quality_label = 1 THEN 'fail'
+    ELSE 'unknown'
+ END AS quality_status,
+
+ingested_at
+FROM public.production_events
+  );
+[0m00:33:53.540597 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:33:53.561917 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.021 seconds
+[0m00:33:53.567220 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:33:53.567613 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+alter table "quality_db"."analytics"."stg_production_events__dbt_tmp" rename to "stg_production_events"
+[0m00:33:53.568838 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:33:53.581039 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: COMMIT
+[0m00:33:53.581525 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:33:53.581827 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: COMMIT
+[0m00:33:53.584797 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m00:33:53.589677 [debug] [Thread-1 (]: Applying DROP to: "quality_db"."analytics"."stg_production_events__dbt_backup"
+[0m00:33:53.593816 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:33:53.594229 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+drop view if exists "quality_db"."analytics"."stg_production_events__dbt_backup" cascade
+[0m00:33:53.596297 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m00:33:53.598393 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: Close
+[0m00:33:53.600623 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '246dc502-5edb-46c4-a7d0-8de416c12206', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5AA459C0>]}
+[0m00:33:53.601262 [info ] [Thread-1 (]: 1 of 1 OK created sql view model analytics.stg_production_events ............... [[32mCREATE VIEW[0m in 0.10s]
+[0m00:33:53.601849 [debug] [Thread-1 (]: Finished running node model.industrial_quality.stg_production_events
+[0m00:33:53.602809 [debug] [MainThread]: On master: COMMIT
+[0m00:33:53.603055 [debug] [MainThread]: Using postgres connection "master"
+[0m00:33:53.603258 [debug] [MainThread]: On master: COMMIT
+[0m00:33:53.603436 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:33:53.612689 [debug] [MainThread]: SQL status: COMMIT in 0.009 seconds
+[0m00:33:53.613085 [debug] [MainThread]: On master: Close
+[0m00:33:53.613466 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:33:53.613676 [debug] [MainThread]: Connection 'create_quality_db_analytics' was properly closed.
+[0m00:33:53.613845 [debug] [MainThread]: Connection 'list_quality_db_analytics' was properly closed.
+[0m00:33:53.613998 [debug] [MainThread]: Connection 'model.industrial_quality.stg_production_events' was properly closed.
+[0m00:33:53.614200 [info ] [MainThread]: 
+[0m00:33:53.614646 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m00:33:53.615342 [debug] [MainThread]: Command end result
+[0m00:33:53.633286 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m00:33:53.635982 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m00:33:53.641087 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\farah\Documents\industrial-quality-pipeline\target\run_results.json
+[0m00:33:53.641400 [info ] [MainThread]: 
+[0m00:33:53.641832 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:33:53.642296 [info ] [MainThread]: 
+[0m00:33:53.642647 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:33:53.643507 [debug] [MainThread]: Command `dbt run` succeeded at 00:33:53.643407 after 1.71 seconds
+[0m00:33:53.643791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5ABE0C30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5AB18F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024F5A79D450>]}
+[0m00:33:53.644070 [debug] [MainThread]: Flushing usage events
+[0m00:33:55.786102 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:40:54.533498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027998DFD6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027995DC6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799A0EFED0>]}
+
+
+============================== 00:40:54.536804 | 14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1 ==============================
+[0m00:40:54.536804 [info ] [MainThread]: Running with dbt=1.11.16
+[0m00:40:54.537361 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m00:40:54.675240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279994D5220>]}
+[0m00:40:54.724898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799A145AE0>]}
+[0m00:40:54.726010 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:40:54.909848 [debug] [MainThread]: checksum: 6775cc4f71c9acc0c7013aa05043ee74c024b5544edd0346634b66273284ee7f, vars: {}, profile: , target: , version: 1.11.16
+[0m00:40:54.982864 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m00:40:54.983280 [debug] [MainThread]: Partial parsing: added file: industrial_quality://models\daily_quality_metrics.sql
+[0m00:40:55.169451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799A1F5550>]}
+[0m00:40:55.211594 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m00:40:55.213768 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m00:40:55.222064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027999F2BC50>]}
+[0m00:40:55.222424 [info ] [MainThread]: Found 2 models, 477 macros
+[0m00:40:55.222746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799BC64830>]}
+[0m00:40:55.223961 [info ] [MainThread]: 
+[0m00:40:55.224343 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:40:55.224654 [info ] [MainThread]: 
+[0m00:40:55.225059 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:40:55.227736 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db'
+[0m00:40:55.328482 [debug] [ThreadPool]: Using postgres connection "list_quality_db"
+[0m00:40:55.328846 [debug] [ThreadPool]: On list_quality_db: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:40:55.329090 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:40:55.365032 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.036 seconds
+[0m00:40:55.366255 [debug] [ThreadPool]: On list_quality_db: Close
+[0m00:40:55.367791 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db_analytics'
+[0m00:40:55.371972 [debug] [ThreadPool]: Using postgres connection "list_quality_db_analytics"
+[0m00:40:55.372265 [debug] [ThreadPool]: On list_quality_db_analytics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db_analytics"} */
+select
+      'quality_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'quality_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m00:40:55.372573 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:40:55.403340 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.031 seconds
+[0m00:40:55.404390 [debug] [ThreadPool]: On list_quality_db_analytics: ROLLBACK
+[0m00:40:55.405185 [debug] [ThreadPool]: On list_quality_db_analytics: Close
+[0m00:40:55.408356 [debug] [MainThread]: Using postgres connection "master"
+[0m00:40:55.408664 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:40:55.408914 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:40:55.443808 [debug] [MainThread]: SQL status: SELECT 1 in 0.035 seconds
+[0m00:40:55.444791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799BD07EE0>]}
+[0m00:40:55.445154 [debug] [MainThread]: On master: ROLLBACK
+[0m00:40:55.445863 [debug] [MainThread]: On master: COMMIT
+[0m00:40:55.446379 [debug] [MainThread]: Using postgres connection "master"
+[0m00:40:55.446661 [debug] [MainThread]: On master: COMMIT
+[0m00:40:55.447532 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m00:40:55.447786 [debug] [MainThread]: On master: Close
+[0m00:40:55.451887 [debug] [Thread-1 (]: Began running node model.industrial_quality.stg_production_events
+[0m00:40:55.452333 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_production_events .................... [RUN]
+[0m00:40:55.452834 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.industrial_quality.stg_production_events'
+[0m00:40:55.453111 [debug] [Thread-1 (]: Began compiling node model.industrial_quality.stg_production_events
+[0m00:40:55.457967 [debug] [Thread-1 (]: Writing injected SQL for node "model.industrial_quality.stg_production_events"
+[0m00:40:55.458944 [debug] [Thread-1 (]: Began executing node model.industrial_quality.stg_production_events
+[0m00:40:55.484226 [debug] [Thread-1 (]: Writing runtime sql for node "model.industrial_quality.stg_production_events"
+[0m00:40:55.485246 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:40:55.485641 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+
+  create view "quality_db"."analytics"."stg_production_events__dbt_tmp"
+    
+    
+  as (
+    SELECT
+event_id,
+event_timestamp,
+unit_id,
+
+sensor_060,
+sensor_104,
+sensor_130,
+sensor_029,
+sensor_511,
+sensor_317,
+sensor_125,
+sensor_126,
+
+quality_label,
+
+CASE
+   WHEN quality_label = -1 THEN 'pass'
+    WHEN quality_label = 1 THEN 'fail'
+    ELSE 'unknown'
+ END AS quality_status,
+
+ingested_at
+FROM public.production_events
+  );
+[0m00:40:55.485977 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:40:55.514920 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.029 seconds
+[0m00:40:55.519344 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:40:55.519645 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+alter table "quality_db"."analytics"."stg_production_events" rename to "stg_production_events__dbt_backup"
+[0m00:40:55.520660 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:40:55.522648 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:40:55.522903 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+alter table "quality_db"."analytics"."stg_production_events__dbt_tmp" rename to "stg_production_events"
+[0m00:40:55.523680 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:40:55.535228 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: COMMIT
+[0m00:40:55.535585 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:40:55.535878 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: COMMIT
+[0m00:40:55.547596 [debug] [Thread-1 (]: SQL status: COMMIT in 0.011 seconds
+[0m00:40:55.552418 [debug] [Thread-1 (]: Applying DROP to: "quality_db"."analytics"."stg_production_events__dbt_backup"
+[0m00:40:55.555835 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m00:40:55.556117 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+drop view if exists "quality_db"."analytics"."stg_production_events__dbt_backup" cascade
+[0m00:40:55.572087 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.016 seconds
+[0m00:40:55.574161 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: Close
+[0m00:40:55.575948 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799BEC1310>]}
+[0m00:40:55.576555 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_production_events ............... [[32mCREATE VIEW[0m in 0.12s]
+[0m00:40:55.577226 [debug] [Thread-1 (]: Finished running node model.industrial_quality.stg_production_events
+[0m00:40:55.577818 [debug] [Thread-1 (]: Began running node model.industrial_quality.daily_quality_metrics
+[0m00:40:55.578188 [info ] [Thread-1 (]: 2 of 2 START sql view model analytics.daily_quality_metrics .................... [RUN]
+[0m00:40:55.578602 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.industrial_quality.stg_production_events, now model.industrial_quality.daily_quality_metrics)
+[0m00:40:55.578879 [debug] [Thread-1 (]: Began compiling node model.industrial_quality.daily_quality_metrics
+[0m00:40:55.580621 [debug] [Thread-1 (]: Writing injected SQL for node "model.industrial_quality.daily_quality_metrics"
+[0m00:40:55.581382 [debug] [Thread-1 (]: Began executing node model.industrial_quality.daily_quality_metrics
+[0m00:40:55.583429 [debug] [Thread-1 (]: Writing runtime sql for node "model.industrial_quality.daily_quality_metrics"
+[0m00:40:55.584185 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m00:40:55.584468 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.daily_quality_metrics"} */
+
+  create view "quality_db"."analytics"."daily_quality_metrics__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    CAST(event_timestamp AS DATE) AS production_date,
+
+    COUNT(*) AS total_units,
+
+    SUM(CASE
+        WHEN quality_label = -1 THEN 1
+        ELSE 0
+    END) AS passed_units,
+
+    SUM(CASE
+        WHEN quality_label = 1 THEN 1
+        ELSE 0
+    END) AS failed_units,
+
+    ROUND(
+        100.0 * SUM(CASE
+            WHEN quality_label = 1 THEN 1
+            ELSE 0
+        END) / NULLIF(COUNT(*), 0),
+        2
+    ) AS failure_rate_pct,
+
+    ROUND(
+        100.0 * SUM(CASE
+            WHEN quality_label = -1 THEN 1
+            ELSE 0
+        END) / NULLIF(COUNT(*), 0),
+        2
+    ) AS pass_rate_pct
+
+FROM "quality_db"."analytics"."stg_production_events"
+
+GROUP BY CAST(event_timestamp AS DATE)
+  );
+[0m00:40:55.585003 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:40:55.610016 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.025 seconds
+[0m00:40:55.612654 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m00:40:55.612981 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.daily_quality_metrics"} */
+alter table "quality_db"."analytics"."daily_quality_metrics__dbt_tmp" rename to "daily_quality_metrics"
+[0m00:40:55.614372 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:40:55.615505 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: COMMIT
+[0m00:40:55.615798 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m00:40:55.616146 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: COMMIT
+[0m00:40:55.618617 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m00:40:55.620208 [debug] [Thread-1 (]: Applying DROP to: "quality_db"."analytics"."daily_quality_metrics__dbt_backup"
+[0m00:40:55.620706 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m00:40:55.620952 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.daily_quality_metrics"} */
+drop view if exists "quality_db"."analytics"."daily_quality_metrics__dbt_backup" cascade
+[0m00:40:55.628778 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.008 seconds
+[0m00:40:55.629860 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: Close
+[0m00:40:55.630395 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14eea9ce-c1cc-42a0-aca0-d2d7b7e04bd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799BC9F490>]}
+[0m00:40:55.630914 [info ] [Thread-1 (]: 2 of 2 OK created sql view model analytics.daily_quality_metrics ............... [[32mCREATE VIEW[0m in 0.05s]
+[0m00:40:55.631459 [debug] [Thread-1 (]: Finished running node model.industrial_quality.daily_quality_metrics
+[0m00:40:55.632412 [debug] [MainThread]: On master: COMMIT
+[0m00:40:55.632662 [debug] [MainThread]: Using postgres connection "master"
+[0m00:40:55.632867 [debug] [MainThread]: On master: COMMIT
+[0m00:40:55.633045 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:40:55.642738 [debug] [MainThread]: SQL status: COMMIT in 0.010 seconds
+[0m00:40:55.643124 [debug] [MainThread]: On master: Close
+[0m00:40:55.643626 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:40:55.643926 [debug] [MainThread]: Connection 'list_quality_db' was properly closed.
+[0m00:40:55.644208 [debug] [MainThread]: Connection 'list_quality_db_analytics' was properly closed.
+[0m00:40:55.644496 [debug] [MainThread]: Connection 'model.industrial_quality.daily_quality_metrics' was properly closed.
+[0m00:40:55.644883 [info ] [MainThread]: 
+[0m00:40:55.645322 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.42 seconds (0.42s).
+[0m00:40:55.646371 [debug] [MainThread]: Command end result
+[0m00:40:55.668344 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m00:40:55.671300 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m00:40:55.678562 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\farah\Documents\industrial-quality-pipeline\target\run_results.json
+[0m00:40:55.678981 [info ] [MainThread]: 
+[0m00:40:55.679592 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:40:55.680195 [info ] [MainThread]: 
+[0m00:40:55.680781 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m00:40:55.682837 [debug] [MainThread]: Command `dbt run` succeeded at 00:40:55.682556 after 1.28 seconds
+[0m00:40:55.683592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799B761C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799BEBFBF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799A17C250>]}
+[0m00:40:55.684239 [debug] [MainThread]: Flushing usage events
+[0m00:40:57.341921 [debug] [MainThread]: An error was encountered while trying to flush usage events
