@@ -49,6 +49,7 @@ services:
     working_dir: /opt/spark-app
     volumes:
       - ./src:/opt/spark-app/src
+      - ./data/raw:/opt/spark-app/data/raw:ro
     command: ["sleep", "infinity"]
     depends_on:
       - kafka

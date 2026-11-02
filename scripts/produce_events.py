@@ -120,7 +120,7 @@ def load_events() -> list[ProductionEvent]:
     if invalid_timestamps.any():
         examples = labels.loc[
             invalid_timestamps, "timestamp"
-        ].head(5).tolist()
+        ].head(20).tolist()
 
         raise ValueError(
             f"Could not parse {invalid_timestamps.sum()} timestamps. "
@@ -171,7 +171,7 @@ def main() -> None:
     parser.add_argument(
         "--limit",
         type=int,
-        default=5,
+        default=20,
         help="Maximum events to process; use 0 for all events.",
     )
     parser.add_argument(
@@ -234,7 +234,7 @@ def main() -> None:
             allow_nan=False,
         ).encode("utf-8"),
         acks="all",
-        retries=5,
+        retries=20,
     )
 
     sent = 0

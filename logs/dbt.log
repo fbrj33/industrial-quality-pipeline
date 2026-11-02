@@ -1226,3 +1226,616 @@ drop view if exists "quality_db"."analytics"."daily_quality_metrics__dbt_backup"
 [0m00:40:55.683592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799B761C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799BEBFBF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002799A17C250>]}
 [0m00:40:55.684239 [debug] [MainThread]: Flushing usage events
 [0m00:40:57.341921 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:17:02.009195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B6F4D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B3F66FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B8243ED0>]}
+
+
+============================== 12:17:02.014339 | 32a21ab1-e8e7-46b2-b071-af3ce7634dd5 ==============================
+[0m12:17:02.014339 [info ] [MainThread]: Running with dbt=1.11.16
+[0m12:17:02.014857 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m12:17:02.205839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B7621220>]}
+[0m12:17:02.254097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B8295AE0>]}
+[0m12:17:02.255397 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m12:17:02.450516 [debug] [MainThread]: checksum: 6775cc4f71c9acc0c7013aa05043ee74c024b5544edd0346634b66273284ee7f, vars: {}, profile: , target: , version: 1.11.16
+[0m12:17:02.576538 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:17:02.576870 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:17:02.577097 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:17:02.596748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B8349750>]}
+[0m12:17:02.643211 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m12:17:02.646274 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m12:17:02.662770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B807BC50>]}
+[0m12:17:02.663120 [info ] [MainThread]: Found 2 models, 477 macros
+[0m12:17:02.663475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B8491390>]}
+[0m12:17:02.664707 [info ] [MainThread]: 
+[0m12:17:02.665033 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:17:02.665303 [info ] [MainThread]: 
+[0m12:17:02.665696 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:17:02.668480 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db'
+[0m12:17:02.916769 [debug] [ThreadPool]: Using postgres connection "list_quality_db"
+[0m12:17:02.917110 [debug] [ThreadPool]: On list_quality_db: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:17:02.917325 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:17:02.979506 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.062 seconds
+[0m12:17:02.980631 [debug] [ThreadPool]: On list_quality_db: Close
+[0m12:17:02.982171 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db_analytics'
+[0m12:17:02.986811 [debug] [ThreadPool]: Using postgres connection "list_quality_db_analytics"
+[0m12:17:02.987109 [debug] [ThreadPool]: On list_quality_db_analytics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db_analytics"} */
+select
+      'quality_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'quality_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m12:17:02.987373 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:17:03.022749 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.035 seconds
+[0m12:17:03.023963 [debug] [ThreadPool]: On list_quality_db_analytics: ROLLBACK
+[0m12:17:03.024757 [debug] [ThreadPool]: On list_quality_db_analytics: Close
+[0m12:17:03.028351 [debug] [MainThread]: Using postgres connection "master"
+[0m12:17:03.028642 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m12:17:03.028879 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:17:03.060781 [debug] [MainThread]: SQL status: SELECT 2 in 0.032 seconds
+[0m12:17:03.062319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B9E7CFC0>]}
+[0m12:17:03.062715 [debug] [MainThread]: On master: ROLLBACK
+[0m12:17:03.063549 [debug] [MainThread]: On master: COMMIT
+[0m12:17:03.063846 [debug] [MainThread]: Using postgres connection "master"
+[0m12:17:03.064050 [debug] [MainThread]: On master: COMMIT
+[0m12:17:03.065298 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m12:17:03.065600 [debug] [MainThread]: On master: Close
+[0m12:17:03.070384 [debug] [Thread-1 (]: Began running node model.industrial_quality.stg_production_events
+[0m12:17:03.070871 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_production_events .................... [RUN]
+[0m12:17:03.071453 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.industrial_quality.stg_production_events'
+[0m12:17:03.071806 [debug] [Thread-1 (]: Began compiling node model.industrial_quality.stg_production_events
+[0m12:17:03.075633 [debug] [Thread-1 (]: Writing injected SQL for node "model.industrial_quality.stg_production_events"
+[0m12:17:03.076448 [debug] [Thread-1 (]: Began executing node model.industrial_quality.stg_production_events
+[0m12:17:03.100809 [debug] [Thread-1 (]: Writing runtime sql for node "model.industrial_quality.stg_production_events"
+[0m12:17:03.102369 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m12:17:03.102725 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+
+  create view "quality_db"."analytics"."stg_production_events__dbt_tmp"
+    
+    
+  as (
+    SELECT
+event_id,
+event_timestamp,
+unit_id,
+
+sensor_060,
+sensor_104,
+sensor_130,
+sensor_029,
+sensor_511,
+sensor_317,
+sensor_125,
+sensor_126,
+
+quality_label,
+
+CASE
+   WHEN quality_label = -1 THEN 'pass'
+    WHEN quality_label = 1 THEN 'fail'
+    ELSE 'unknown'
+ END AS quality_status,
+
+ingested_at
+FROM public.production_events
+  );
+[0m12:17:03.102958 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:17:03.139431 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.036 seconds
+[0m12:17:03.143923 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m12:17:03.144241 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+alter table "quality_db"."analytics"."stg_production_events" rename to "stg_production_events__dbt_backup"
+[0m12:17:03.145573 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:17:03.147682 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m12:17:03.147942 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+alter table "quality_db"."analytics"."stg_production_events__dbt_tmp" rename to "stg_production_events"
+[0m12:17:03.148745 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:17:03.160649 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: COMMIT
+[0m12:17:03.160991 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m12:17:03.161220 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: COMMIT
+[0m12:17:03.165118 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m12:17:03.169286 [debug] [Thread-1 (]: Applying DROP to: "quality_db"."analytics"."stg_production_events__dbt_backup"
+[0m12:17:03.172661 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.stg_production_events"
+[0m12:17:03.172958 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.stg_production_events"} */
+drop view if exists "quality_db"."analytics"."stg_production_events__dbt_backup" cascade
+[0m12:17:03.179351 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.006 seconds
+[0m12:17:03.181381 [debug] [Thread-1 (]: On model.industrial_quality.stg_production_events: Close
+[0m12:17:03.184090 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B9F38C50>]}
+[0m12:17:03.184727 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_production_events ............... [[32mCREATE VIEW[0m in 0.11s]
+[0m12:17:03.185474 [debug] [Thread-1 (]: Finished running node model.industrial_quality.stg_production_events
+[0m12:17:03.186435 [debug] [Thread-1 (]: Began running node model.industrial_quality.daily_quality_metrics
+[0m12:17:03.186814 [info ] [Thread-1 (]: 2 of 2 START sql view model analytics.daily_quality_metrics .................... [RUN]
+[0m12:17:03.187315 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.industrial_quality.stg_production_events, now model.industrial_quality.daily_quality_metrics)
+[0m12:17:03.187634 [debug] [Thread-1 (]: Began compiling node model.industrial_quality.daily_quality_metrics
+[0m12:17:03.189856 [debug] [Thread-1 (]: Writing injected SQL for node "model.industrial_quality.daily_quality_metrics"
+[0m12:17:03.190729 [debug] [Thread-1 (]: Began executing node model.industrial_quality.daily_quality_metrics
+[0m12:17:03.192854 [debug] [Thread-1 (]: Writing runtime sql for node "model.industrial_quality.daily_quality_metrics"
+[0m12:17:03.193682 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m12:17:03.193970 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.daily_quality_metrics"} */
+
+  create view "quality_db"."analytics"."daily_quality_metrics__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    CAST(event_timestamp AS DATE) AS production_date,
+
+    COUNT(*) AS total_units,
+
+    SUM(CASE
+        WHEN quality_label = -1 THEN 1
+        ELSE 0
+    END) AS passed_units,
+
+    SUM(CASE
+        WHEN quality_label = 1 THEN 1
+        ELSE 0
+    END) AS failed_units,
+
+    ROUND(
+        100.0 * SUM(CASE
+            WHEN quality_label = 1 THEN 1
+            ELSE 0
+        END) / NULLIF(COUNT(*), 0),
+        2
+    ) AS failure_rate_pct,
+
+    ROUND(
+        100.0 * SUM(CASE
+            WHEN quality_label = -1 THEN 1
+            ELSE 0
+        END) / NULLIF(COUNT(*), 0),
+        2
+    ) AS pass_rate_pct
+
+FROM "quality_db"."analytics"."stg_production_events"
+
+GROUP BY CAST(event_timestamp AS DATE)
+  );
+[0m12:17:03.194219 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:17:03.233620 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.039 seconds
+[0m12:17:03.237194 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m12:17:03.237609 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.daily_quality_metrics"} */
+alter table "quality_db"."analytics"."daily_quality_metrics__dbt_tmp" rename to "daily_quality_metrics"
+[0m12:17:03.238967 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:17:03.240078 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: COMMIT
+[0m12:17:03.240387 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m12:17:03.240623 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: COMMIT
+[0m12:17:03.243065 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:17:03.244574 [debug] [Thread-1 (]: Applying DROP to: "quality_db"."analytics"."daily_quality_metrics__dbt_backup"
+[0m12:17:03.245084 [debug] [Thread-1 (]: Using postgres connection "model.industrial_quality.daily_quality_metrics"
+[0m12:17:03.245323 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "model.industrial_quality.daily_quality_metrics"} */
+drop view if exists "quality_db"."analytics"."daily_quality_metrics__dbt_backup" cascade
+[0m12:17:03.246816 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m12:17:03.247810 [debug] [Thread-1 (]: On model.industrial_quality.daily_quality_metrics: Close
+[0m12:17:03.248330 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '32a21ab1-e8e7-46b2-b071-af3ce7634dd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B9B468E0>]}
+[0m12:17:03.248831 [info ] [Thread-1 (]: 2 of 2 OK created sql view model analytics.daily_quality_metrics ............... [[32mCREATE VIEW[0m in 0.06s]
+[0m12:17:03.249515 [debug] [Thread-1 (]: Finished running node model.industrial_quality.daily_quality_metrics
+[0m12:17:03.250613 [debug] [MainThread]: On master: COMMIT
+[0m12:17:03.250886 [debug] [MainThread]: Using postgres connection "master"
+[0m12:17:03.251100 [debug] [MainThread]: On master: COMMIT
+[0m12:17:03.251344 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:17:03.271697 [debug] [MainThread]: SQL status: COMMIT in 0.020 seconds
+[0m12:17:03.272169 [debug] [MainThread]: On master: Close
+[0m12:17:03.272605 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:17:03.273056 [debug] [MainThread]: Connection 'list_quality_db' was properly closed.
+[0m12:17:03.273264 [debug] [MainThread]: Connection 'list_quality_db_analytics' was properly closed.
+[0m12:17:03.273432 [debug] [MainThread]: Connection 'model.industrial_quality.daily_quality_metrics' was properly closed.
+[0m12:17:03.273691 [info ] [MainThread]: 
+[0m12:17:03.274060 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.61 seconds (0.61s).
+[0m12:17:03.275030 [debug] [MainThread]: Command end result
+[0m12:17:03.341675 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m12:17:03.343807 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m12:17:03.348035 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\farah\Documents\industrial-quality-pipeline\target\run_results.json
+[0m12:17:03.348281 [info ] [MainThread]: 
+[0m12:17:03.348738 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:17:03.349151 [info ] [MainThread]: 
+[0m12:17:03.349434 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m12:17:03.350386 [debug] [MainThread]: Command `dbt run` succeeded at 12:17:03.350280 after 1.46 seconds
+[0m12:17:03.350729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B82D9F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B9AC2840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264B84DD5D0>]}
+[0m12:17:03.351006 [debug] [MainThread]: Flushing usage events
+[0m12:17:04.401258 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:20:04.228132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C77DC16A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C74D56FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7909FED0>]}
+
+
+============================== 12:20:04.231441 | 7f0ea919-17c2-48af-b110-c306d1570736 ==============================
+[0m12:20:04.231441 [info ] [MainThread]: Running with dbt=1.11.16
+[0m12:20:04.232031 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\farah\\.dbt', 'invocation_command': 'dbt test', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\farah\\Documents\\industrial-quality-pipeline\\logs'}
+[0m12:20:04.363154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f0ea919-17c2-48af-b110-c306d1570736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C78481220>]}
+[0m12:20:04.416992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7f0ea919-17c2-48af-b110-c306d1570736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C790F1AE0>]}
+[0m12:20:04.417947 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m12:20:04.587996 [debug] [MainThread]: checksum: 6775cc4f71c9acc0c7013aa05043ee74c024b5544edd0346634b66273284ee7f, vars: {}, profile: , target: , version: 1.11.16
+[0m12:20:04.657670 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m12:20:04.658104 [debug] [MainThread]: Partial parsing: added file: industrial_quality://models\schema.yml
+[0m12:20:04.841565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7f0ea919-17c2-48af-b110-c306d1570736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C791A4C50>]}
+[0m12:20:04.938504 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m12:20:04.940489 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m12:20:04.960053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7f0ea919-17c2-48af-b110-c306d1570736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7AAE9F40>]}
+[0m12:20:04.960437 [info ] [MainThread]: Found 2 models, 5 data tests, 477 macros
+[0m12:20:04.960835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f0ea919-17c2-48af-b110-c306d1570736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7904A270>]}
+[0m12:20:04.962182 [info ] [MainThread]: 
+[0m12:20:04.962478 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:20:04.962933 [info ] [MainThread]: 
+[0m12:20:04.963561 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:20:04.966222 [debug] [ThreadPool]: Acquiring new postgres connection 'list_quality_db_analytics'
+[0m12:20:05.032749 [debug] [ThreadPool]: Using postgres connection "list_quality_db_analytics"
+[0m12:20:05.033061 [debug] [ThreadPool]: On list_quality_db_analytics: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "list_quality_db_analytics"} */
+select
+      'quality_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'quality_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'quality_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m12:20:05.033273 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:20:05.072041 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.039 seconds
+[0m12:20:05.073109 [debug] [ThreadPool]: On list_quality_db_analytics: ROLLBACK
+[0m12:20:05.073946 [debug] [ThreadPool]: On list_quality_db_analytics: Close
+[0m12:20:05.077426 [debug] [MainThread]: Using postgres connection "master"
+[0m12:20:05.077745 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m12:20:05.077990 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:20:05.108882 [debug] [MainThread]: SQL status: SELECT 2 in 0.031 seconds
+[0m12:20:05.110159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f0ea919-17c2-48af-b110-c306d1570736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7AE1E0D0>]}
+[0m12:20:05.110652 [debug] [MainThread]: On master: ROLLBACK
+[0m12:20:05.111467 [debug] [MainThread]: On master: COMMIT
+[0m12:20:05.111704 [debug] [MainThread]: Using postgres connection "master"
+[0m12:20:05.111890 [debug] [MainThread]: On master: COMMIT
+[0m12:20:05.112899 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m12:20:05.113179 [debug] [MainThread]: On master: Close
+[0m12:20:05.116236 [debug] [Thread-1 (]: Began running node test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4
+[0m12:20:05.116633 [info ] [Thread-1 (]: 1 of 5 START test accepted_values_stg_production_events_quality_label___1__1 ... [RUN]
+[0m12:20:05.117223 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4'
+[0m12:20:05.117542 [debug] [Thread-1 (]: Began compiling node test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4
+[0m12:20:05.123710 [debug] [Thread-1 (]: Writing injected SQL for node "test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4"
+[0m12:20:05.125056 [debug] [Thread-1 (]: Began executing node test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4
+[0m12:20:05.139696 [debug] [Thread-1 (]: Writing runtime sql for node "test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4"
+[0m12:20:05.141141 [debug] [Thread-1 (]: Using postgres connection "test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4"
+[0m12:20:05.141530 [debug] [Thread-1 (]: On test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        quality_label as value_field,
+        count(*) as n_records
+
+    from "quality_db"."analytics"."stg_production_events"
+    group by quality_label
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '-1','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:20:05.141804 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:20:05.157166 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m12:20:05.160704 [debug] [Thread-1 (]: On test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4: ROLLBACK
+[0m12:20:05.161756 [debug] [Thread-1 (]: On test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4: Close
+[0m12:20:05.162431 [info ] [Thread-1 (]: 1 of 5 PASS accepted_values_stg_production_events_quality_label___1__1 ......... [[32mPASS[0m in 0.05s]
+[0m12:20:05.163135 [debug] [Thread-1 (]: Finished running node test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4
+[0m12:20:05.163461 [debug] [Thread-1 (]: Began running node test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2
+[0m12:20:05.163812 [info ] [Thread-1 (]: 2 of 5 START test not_null_stg_production_events_event_id ...................... [RUN]
+[0m12:20:05.164237 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.industrial_quality.accepted_values_stg_production_events_quality_label___1__1.8a55a8acb4, now test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2)
+[0m12:20:05.164492 [debug] [Thread-1 (]: Began compiling node test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2
+[0m12:20:05.169796 [debug] [Thread-1 (]: Writing injected SQL for node "test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2"
+[0m12:20:05.170785 [debug] [Thread-1 (]: Began executing node test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2
+[0m12:20:05.172419 [debug] [Thread-1 (]: Writing runtime sql for node "test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2"
+[0m12:20:05.173310 [debug] [Thread-1 (]: Using postgres connection "test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2"
+[0m12:20:05.173626 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_id
+from "quality_db"."analytics"."stg_production_events"
+where event_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:20:05.173880 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:20:05.199482 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.026 seconds
+[0m12:20:05.200670 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2: ROLLBACK
+[0m12:20:05.201440 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2: Close
+[0m12:20:05.201951 [info ] [Thread-1 (]: 2 of 5 PASS not_null_stg_production_events_event_id ............................ [[32mPASS[0m in 0.04s]
+[0m12:20:05.202619 [debug] [Thread-1 (]: Finished running node test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2
+[0m12:20:05.202904 [debug] [Thread-1 (]: Began running node test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52
+[0m12:20:05.203215 [info ] [Thread-1 (]: 3 of 5 START test not_null_stg_production_events_event_timestamp ............... [RUN]
+[0m12:20:05.203647 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.industrial_quality.not_null_stg_production_events_event_id.6cb595d2c2, now test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52)
+[0m12:20:05.203927 [debug] [Thread-1 (]: Began compiling node test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52
+[0m12:20:05.206551 [debug] [Thread-1 (]: Writing injected SQL for node "test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52"
+[0m12:20:05.208096 [debug] [Thread-1 (]: Began executing node test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52
+[0m12:20:05.209808 [debug] [Thread-1 (]: Writing runtime sql for node "test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52"
+[0m12:20:05.210639 [debug] [Thread-1 (]: Using postgres connection "test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52"
+[0m12:20:05.210905 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select event_timestamp
+from "quality_db"."analytics"."stg_production_events"
+where event_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:20:05.211132 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:20:05.232995 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.022 seconds
+[0m12:20:05.234216 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52: ROLLBACK
+[0m12:20:05.235008 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52: Close
+[0m12:20:05.235602 [info ] [Thread-1 (]: 3 of 5 PASS not_null_stg_production_events_event_timestamp ..................... [[32mPASS[0m in 0.03s]
+[0m12:20:05.236298 [debug] [Thread-1 (]: Finished running node test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52
+[0m12:20:05.236787 [debug] [Thread-1 (]: Began running node test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66
+[0m12:20:05.237122 [info ] [Thread-1 (]: 4 of 5 START test not_null_stg_production_events_quality_label ................. [RUN]
+[0m12:20:05.237594 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.industrial_quality.not_null_stg_production_events_event_timestamp.7c21d60a52, now test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66)
+[0m12:20:05.237878 [debug] [Thread-1 (]: Began compiling node test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66
+[0m12:20:05.240929 [debug] [Thread-1 (]: Writing injected SQL for node "test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66"
+[0m12:20:05.241899 [debug] [Thread-1 (]: Began executing node test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66
+[0m12:20:05.243664 [debug] [Thread-1 (]: Writing runtime sql for node "test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66"
+[0m12:20:05.244417 [debug] [Thread-1 (]: Using postgres connection "test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66"
+[0m12:20:05.244707 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select quality_label
+from "quality_db"."analytics"."stg_production_events"
+where quality_label is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:20:05.244949 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:20:05.277849 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.033 seconds
+[0m12:20:05.279088 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66: ROLLBACK
+[0m12:20:05.279765 [debug] [Thread-1 (]: On test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66: Close
+[0m12:20:05.280317 [info ] [Thread-1 (]: 4 of 5 PASS not_null_stg_production_events_quality_label ....................... [[32mPASS[0m in 0.04s]
+[0m12:20:05.280908 [debug] [Thread-1 (]: Finished running node test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66
+[0m12:20:05.281220 [debug] [Thread-1 (]: Began running node test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e
+[0m12:20:05.281482 [info ] [Thread-1 (]: 5 of 5 START test unique_stg_production_events_event_id ........................ [RUN]
+[0m12:20:05.281973 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.industrial_quality.not_null_stg_production_events_quality_label.b15f226b66, now test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e)
+[0m12:20:05.282259 [debug] [Thread-1 (]: Began compiling node test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e
+[0m12:20:05.286801 [debug] [Thread-1 (]: Writing injected SQL for node "test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e"
+[0m12:20:05.287739 [debug] [Thread-1 (]: Began executing node test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e
+[0m12:20:05.289208 [debug] [Thread-1 (]: Writing runtime sql for node "test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e"
+[0m12:20:05.289949 [debug] [Thread-1 (]: Using postgres connection "test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e"
+[0m12:20:05.290232 [debug] [Thread-1 (]: On test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e: /* {"app": "dbt", "dbt_version": "1.11.16", "profile_name": "industrial_quality", "target_name": "dev", "node_id": "test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    event_id as unique_field,
+    count(*) as n_records
+
+from "quality_db"."analytics"."stg_production_events"
+where event_id is not null
+group by event_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m12:20:05.290499 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:20:05.309551 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.019 seconds
+[0m12:20:05.310788 [debug] [Thread-1 (]: On test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e: ROLLBACK
+[0m12:20:05.311440 [debug] [Thread-1 (]: On test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e: Close
+[0m12:20:05.311973 [info ] [Thread-1 (]: 5 of 5 PASS unique_stg_production_events_event_id .............................. [[32mPASS[0m in 0.03s]
+[0m12:20:05.312549 [debug] [Thread-1 (]: Finished running node test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e
+[0m12:20:05.313523 [debug] [MainThread]: On master: COMMIT
+[0m12:20:05.313768 [debug] [MainThread]: Using postgres connection "master"
+[0m12:20:05.313963 [debug] [MainThread]: On master: COMMIT
+[0m12:20:05.314140 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:20:05.340198 [debug] [MainThread]: SQL status: COMMIT in 0.026 seconds
+[0m12:20:05.340625 [debug] [MainThread]: On master: Close
+[0m12:20:05.341014 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:20:05.341360 [debug] [MainThread]: Connection 'list_quality_db_analytics' was properly closed.
+[0m12:20:05.341583 [debug] [MainThread]: Connection 'test.industrial_quality.unique_stg_production_events_event_id.9d8c05e55e' was properly closed.
+[0m12:20:05.341833 [info ] [MainThread]: 
+[0m12:20:05.342214 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m12:20:05.343224 [debug] [MainThread]: Command end result
+[0m12:20:05.362587 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\manifest.json
+[0m12:20:05.364591 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\farah\Documents\industrial-quality-pipeline\target\semantic_manifest.json
+[0m12:20:05.369773 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\farah\Documents\industrial-quality-pipeline\target\run_results.json
+[0m12:20:05.370070 [info ] [MainThread]: 
+[0m12:20:05.370625 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:20:05.370935 [info ] [MainThread]: 
+[0m12:20:05.371266 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m12:20:05.372133 [debug] [MainThread]: Command `dbt test` succeeded at 12:20:05.372037 after 1.24 seconds
+[0m12:20:05.372412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C78E57650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7AAC7800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7AAC76A0>]}
+[0m12:20:05.372677 [debug] [MainThread]: Flushing usage events
+[0m12:20:06.328207 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: stg_production_events
+    columns:
+      - name: event_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: event_timestamp
+        data_tests:
+          - not_null
+
+      - name: quality_label
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [-1, 1]
