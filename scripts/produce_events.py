@@ -17,7 +17,7 @@ from src.schemas.production_event import ProductionEvent
 DATA_PATH = PROJECT_ROOT / "data" / "raw" / "secom.data"
 LABELS_PATH = PROJECT_ROOT / "data" / "raw" / "secom_labels.data"
 
-# Zero-based column indices, matching the convention used in exploration.
+# Zero-based column indices.
 SENSOR_INDICES = {
     "sensor_060": 60,
     "sensor_104": 104,
@@ -31,7 +31,7 @@ SENSOR_INDICES = {
 
 
 def load_labels() -> pd.DataFrame:
-    """Read labels while preserving each quoted timestamp as one field."""
+    """Read labels while preserving quoted timestamps."""
 
     label_values = []
     timestamp_values = []
@@ -43,7 +43,6 @@ def load_labels() -> pd.DataFrame:
             if not line:
                 continue
 
-            # Example: -1 "19/07/2008 11:55:00"
             label_text, separator, timestamp_text = line.partition(" ")
 
             if not separator:
@@ -70,16 +69,14 @@ def load_labels() -> pd.DataFrame:
             label_values.append(label)
             timestamp_values.append(timestamp_text)
 
-    return pd.DataFrame(
-        {
-            "quality_label": label_values,
-            "timestamp": timestamp_values,
-        }
-    )
+    return pd.DataFrame({
+        "quality_label": label_values,
+        "timestamp": timestamp_values,
+    })
 
 
 def load_events() -> list[ProductionEvent]:
-    """Load SECOM data and convert rows into validated production events."""
+    """Load SECOM data and create validated production events."""
 
     if not DATA_PATH.exists():
         raise FileNotFoundError(f"Sensor data not found: {DATA_PATH}")
@@ -135,8 +132,6 @@ def load_events() -> list[ProductionEvent]:
         for sensor_name, column_index in SENSOR_INDICES.items():
             value = row.iloc[column_index]
 
-            # Preserve missing measurements instead of replacing them
-            # with zero or imputing them.
             sensor_values[sensor_name] = (
                 None if pd.isna(value) else float(value)
             )
@@ -158,6 +153,15 @@ def load_events() -> list[ProductionEvent]:
     return events
 
 
+def serialize_event(event: ProductionEvent) -> dict:
+    """Serialize a validated event to a JSON-compatible dictionary."""
+
+    if hasattr(event, "model_dump"):
+        return event.model_dump(mode="json")
+
+    return json.loads(event.json())
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Replay SECOM production measurements into Kafka."
@@ -168,23 +172,34 @@ def main() -> None:
         action="store_true",
         help="Print events without connecting to Kafka.",
     )
+
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=0,
+        help="Zero-based dataset index of the first event to publish.",
+    )
+
     parser.add_argument(
         "--limit",
         type=int,
         default=20,
-        help="Maximum events to process; use 0 for all events.",
+        help="Maximum events to process; use 0 for all remaining events.",
     )
+
     parser.add_argument(
         "--interval",
         type=float,
         default=1.0,
         help="Seconds between published events.",
     )
+
     parser.add_argument(
         "--bootstrap-servers",
         default="localhost:9092",
         help="Kafka broker address.",
     )
+
     parser.add_argument(
         "--topic",
         default="production-events",
@@ -192,6 +207,9 @@ def main() -> None:
     )
 
     args = parser.parse_args()
+
+    if args.start < 0:
+        parser.error("--start must be 0 or greater.")
 
     if args.limit < 0:
         parser.error("--limit must be 0 or greater.")
@@ -201,17 +219,33 @@ def main() -> None:
 
     events = load_events()
 
-    if args.limit > 0:
-        events = events[:args.limit]
+    total_events = len(events)
+
+    # Select the requested dataset range.
+    if args.start >= total_events:
+        parser.error(
+            f"--start must be less than the number of events ({total_events})."
+        )
+
+    if args.limit == 0:
+        events = events[args.start:]
+    else:
+        events = events[args.start:args.start + args.limit]
+
+    if not events:
+        parser.error("No events selected.")
+
+    print(
+        f"\nSelected events: {len(events)} "
+        f"(dataset indices {args.start} to "
+        f"{args.start + len(events) - 1})"
+    )
 
     if args.dry_run:
         print("\nDry run: no messages will be sent to Kafka.\n")
 
         for event in events:
-            if hasattr(event, "model_dump"):
-                 payload = event.model_dump(mode="json")
-            else:
-                payload = json.loads(event.json())
+            payload = serialize_event(event)
 
             print(
                 json.dumps(
@@ -241,12 +275,9 @@ def main() -> None:
 
     try:
         for event in events:
-            if hasattr(event, "model_dump"):
-                payload = event.model_dump(mode="json")
-            else:
-                payload = json.loads(event.json())
+            payload = serialize_event(event)
 
-            # Wait for broker acknowledgement so failures are visible.
+            # Wait for broker acknowledgement.
             producer.send(
                 args.topic,
                 value=payload,
