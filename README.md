@@ -272,32 +272,9 @@ industrial-quality-pipeline/
 └── README.md
 ```
 
-## Project Status
 
-| Component | Status |
-|---|---|
-| SECOM data preparation | Implemented |
-| Python event producer | Implemented |
-| Kafka event streaming | Implemented |
-| Spark Structured Streaming | Implemented |
-| PostgreSQL persistence | Implemented |
-| SPC three-sigma detection | Implemented |
-| Batch processing metrics | Implemented |
-| dbt staging models | Implemented |
-| dbt intermediate models | Implemented |
-| dbt analytical marts | Implemented |
-| dbt data tests | Implemented |
-| Power BI dashboard | Planned |
-| Full-dataset processing and benchmarking | Pending |
-| Final end-to-end validation | Pending |
 
-## Future Improvements
 
-- Complete the Power BI dashboard.
-- Process the full SECOM dataset.
-- Benchmark pipeline throughput and latency.
-- Perform final end-to-end validation.
-- Document experimental results and performance findings.
 
 ## Learning Objectives
 
