@@ -1,24 +1,8 @@
 # Industrial Quality Analytics Pipeline
 
-An end-to-end data engineering project for processing semiconductor manufacturing data and monitoring production quality using streaming technologies and statistical process control (SPC).
+An end-to-end data engineering project for monitoring semiconductor manufacturing quality using event streaming, distributed processing, statistical process control (SPC), and analytical data transformation.
 
-The project uses the **SECOM semiconductor manufacturing dataset** to build a data pipeline that ingests production measurements, processes events in real time, stores them in PostgreSQL, and transforms them into analytics-ready datasets.
-
-## Project Overview
-
-Manufacturing processes generate large volumes of sensor measurements. Detecting quality issues early requires a reliable pipeline capable of ingesting, processing, storing, and analyzing production data.
-
-This project explores how modern data engineering technologies can support industrial quality monitoring through a combination of batch data preparation, event streaming, stream processing, and analytical data modeling.
-
-### Objectives
-
-- Build an end-to-end data pipeline using modern data engineering technologies.
-- Ingest production measurements and publish them as Kafka events.
-- Process incoming events using Spark Structured Streaming.
-- Persist processed production data in PostgreSQL.
-- Transform raw production data into analytical models using dbt.
-- Prepare quality metrics for visualization and industrial monitoring.
-- Explore Statistical Process Control (SPC) to identify potential production anomalies.
+The project uses the **SECOM semiconductor manufacturing dataset** to build a pipeline that ingests production measurements, processes them through Kafka and Spark Structured Streaming, stores them in PostgreSQL, and transforms them into analytics-ready datasets using dbt.
 
 ## Architecture
 
@@ -28,12 +12,13 @@ flowchart LR
     B --> C["Apache Kafka"]
     C --> D["Spark Structured Streaming"]
     D --> E["PostgreSQL"]
-    E --> F["dbt"]
-    F --> G["Analytics-ready Models"]
-    G --> H["Power BI"]
+    E --> F["dbt Staging"]
+    F --> G["dbt Intermediate"]
+    G --> H["dbt Analytical Marts"]
+    H --> I["Power BI"]
 ```
 
-The pipeline is containerized locally using Docker Compose.
+The infrastructure is containerized locally using Docker Compose.
 
 ## Technology Stack
 
@@ -41,84 +26,213 @@ The pipeline is containerized locally using Docker Compose.
 |---|---|
 | Python | Data preparation and event production |
 | Pydantic | Event schema validation |
-| Apache Kafka | Event streaming and message ingestion |
-| Apache Spark | Distributed stream processing |
+| Apache Kafka | Event streaming |
+| Apache Spark Structured Streaming | Stream processing and SPC detection |
 | PostgreSQL | Persistent storage |
 | dbt Core | Data transformation and testing |
-| Docker Compose | Local infrastructure and service orchestration |
+| Docker Compose | Local infrastructure |
 | Power BI | Planned data visualization |
 
 ## Dataset
 
-The project uses the **SECOM dataset**, which contains semiconductor manufacturing measurements and corresponding pass/fail labels.
+The project uses the SECOM dataset, containing semiconductor manufacturing measurements and corresponding quality labels.
 
-Dataset characteristics:
-- 1,567 production records.
+- 1,567 production observations.
 - 590 sensor measurement features.
-- Binary quality labels:
+- Quality labels:
   - `-1`: Pass
   - `1`: Fail
 
-To keep the initial pipeline manageable, eight sensors were selected for processing:
+Eight sensors are selected for the initial pipeline:
 
-` sensor_060`, `sensor_104`, `sensor_130`, `sensor_029`, `sensor_511`, `sensor_317`, `sensor_125`, `sensor_126`
+- `sensor_060`
+- `sensor_104`
+- `sensor_130`
+- `sensor_029`
+- `sensor_511`
+- `sensor_317`
+- `sensor_125`
+- `sensor_126`
 
-The selection considers sensor variability, missing values, and their relationship with production quality.
+## Pipeline Components
 
-## Pipeline Workflow
+### 1. Data Ingestion
 
-### 1. Data Ingestion and Event Production
-
-A Python producer reads the SECOM dataset, prepares production records, validates them against a Pydantic event schema, and publishes them to Kafka.
+A Python producer reads the SECOM dataset, prepares production records, validates them using Pydantic, and publishes them to Kafka.
 
 Each event contains:
 - Event ID
 - Event timestamp
 - Production unit ID
-- Selected sensor measurements
+- Eight selected sensor measurements
 - Quality label
 
-Kafka topic: `production-events`
+Kafka topic: `production-events`.
 
-### 2. Event Streaming with Apache Kafka
+### 2. Event Streaming
 
-Apache Kafka acts as the event streaming layer between the Python producer and the processing engine.
+Apache Kafka acts as the message broker between the producer and Spark processing application.
 
-It decouples data production from data processing and allows production events to be consumed asynchronously.
+It decouples event production from event consumption and enables asynchronous processing.
 
-### 3. Stream Processing with Apache Spark
+### 3. Stream Processing and SPC
 
-Spark Structured Streaming consumes events from Kafka and processes the incoming production measurements.
+Spark Structured Streaming consumes production events from Kafka and processes them in micro-batches.
 
-The processed events are written to PostgreSQL for persistent storage and downstream analysis.
+The application:
+- Reads incoming production events.
+- Processes the selected sensor measurements.
+- Compares readings against historical sensor baselines.
+- Detects readings outside three-sigma control limits.
+- Persists production events and detected anomalies in PostgreSQL.
+- Records batch processing metrics.
 
-### 4. Data Storage with PostgreSQL
+The three-sigma control limits are calculated using:
 
-PostgreSQL stores the processed production events in a structured relational table.
+\[
+UCL = \mu + 3\sigma
+\]
 
-The main `production_events` table contains the event metadata, selected sensor measurements, quality labels, and ingestion timestamps.
+\[
+LCL = \mu - 3\sigma
+\]
 
-### 5. Data Transformation with dbt
+Where:
+- \(\mu\) is the baseline sensor mean.
+- \(\sigma\) is the baseline sensor standard deviation.
 
-dbt Core is used to transform stored production data into analytics-ready models.
+An SPC violation indicates a potentially unusual process measurement; it does not automatically mean that a production unit is defective.
 
-Current models include:
+### 4. PostgreSQL Storage
 
-- **`stg_production_events`**: Standardizes production event data and derives a readable quality status (`PASS` / `FAIL`).
-- **`daily_quality_metrics`**: Aggregates production records by date and calculates total units, passed units, failed units, and quality rates.
+PostgreSQL stores production data, anomaly records, sensor baseline statistics, and pipeline processing metrics.
 
-These models provide a foundation for downstream quality analysis and reporting.
+Main tables include:
+- `production_events`
+- `sensor_anomalies`
+- `sensor_baseline_stats`
+- `pipeline_batch_metrics`
 
-## Statistical Process Control
+### 5. dbt Transformations
 
-A key objective of the project is to introduce Statistical Process Control (SPC) techniques to monitor manufacturing quality.
+dbt Core transforms the PostgreSQL data into reusable analytical models.
 
-The planned monitoring logic includes:
+**Staging layer**
+- `stg_production_events`: cleans and standardizes production event data.
+- `stg_sensor_anomalies`: exposes Spark-generated anomaly records for analytics.
 
-- **Three-sigma control limits:** Identify measurements outside the mean ± 3 standard deviations.
-- **Eight consecutive points:** Detect potential process shifts when eight consecutive measurements fall on the same side of the mean.
+**Intermediate layer**
+- `int_sensor_readings`: converts the eight sensor columns into individual sensor-reading records using a long-format structure.
 
-These rules will help identify potential out-of-control production behavior.
+**Analytical marts**
+- `mart_daily_quality_metrics`: daily production volume, pass/fail counts, and quality rates.
+- `mart_sensor_performance`: sensor statistics and comparisons between passed and failed production units.
+- `mart_sensor_anomaly_summary`: anomaly counts grouped by date, sensor, anomaly type, and deviation type.
+
+The project includes dbt data tests for uniqueness, missing values, accepted values, and relationships between production events and anomaly records.
+
+## Benchmarking
+
+The pipeline records batch processing metrics in PostgreSQL to support performance evaluation.
+
+The benchmarking phase will evaluate:
+- Processing duration.
+- Event throughput.
+- Batch processing performance.
+- End-to-end processing latency.
+
+Full-dataset benchmarking and final performance analysis are planned.
+
+## Power BI Dashboard
+
+The analytical marts are designed to support a Power BI dashboard containing:
+
+- Production KPIs: total, passed, and failed units.
+- Daily production quality trends.
+- Failure and pass rates.
+- Anomaly counts by sensor.
+- Sensor performance comparisons.
+
+Power BI dashboard implementation is planned.
+
+## Running the Project
+
+### Prerequisites
+
+- Docker Desktop
+- Python 3.11 or later
+- Power BI Desktop (for visualization)
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd industrial-quality-pipeline
+```
+
+### 2. Create and activate a virtual environment
+
+Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
+
+```powershell
+pip install -r requirements.txt
+```
+
+### 4. Start infrastructure
+
+```powershell
+docker compose up -d
+```
+
+### 5. Calculate sensor baselines
+
+```powershell
+spark-submit src/streaming/calculate_sensor_baseline.py
+```
+
+Use the project's configured Spark environment and dependencies when running this script.
+
+### 6. Start the Spark streaming consumer
+
+Run the consumer using the configured Spark container:
+
+```powershell
+docker exec -it industrial-spark /opt/spark/bin/spark-submit `
+  --conf spark.jars.ivy=/tmp/spark-ivy `
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.6,org.postgresql:postgresql:42.7.5 `
+  /opt/spark-app/src/streaming/spark_consumer.py
+```
+
+### 7. Publish production events
+
+In another terminal:
+
+```powershell
+python scripts/produce_events.py --start 0 --limit 20 --interval 1
+```
+
+To publish all remaining observations:
+
+```powershell
+python scripts/produce_events.py --start 0 --limit 0 --interval 1
+```
+
+Run the producer with the Spark consumer active.
+
+### 8. Run dbt transformations and tests
+
+```powershell
+dbt debug
+dbt build
+```
 
 ## Project Structure
 
@@ -126,23 +240,65 @@ These rules will help identify potential out-of-control production behavior.
 industrial-quality-pipeline/
 │
 ├── data/
-│   └── raw/                    # SECOM dataset files
+│   ├── raw/
+│   └── processed/
 │
 ├── scripts/
-│   └── produce_events.py       # Kafka event producer
+│   └── produce_events.py
 │
 ├── src/
-│   ├── schemas/                # Pydantic event schemas
-│   └── streaming/              # Spark streaming application
+│   ├── schemas/
+│   │   └── production_event.py
+│   └── streaming/
+│       ├── calculate_sensor_baseline.py
+│       ├── detect_spc_anomalies.py
+│       └── spark_consumer.py
 │
 ├── models/
-│   └── staging/
-│       └── stg_production_events.sql
+│   ├── staging/
+│   │   ├── stg_production_events.sql
+│   │   └── stg_sensor_anomalies.sql
+│   ├── intermediate/
+│   │   └── int_sensor_readings.sql
+│   ├── marts/
+│   │   ├── mart_daily_quality_metrics.sql
+│   │   ├── mart_sensor_performance.sql
+│   │   └── mart_sensor_anomaly_summary.sql
+│   └── schema.yml
 │
-├── docker-compose.yml          # Local infrastructure
-├── dbt_project.yml             # dbt project configuration
+├── docker-compose.yml
+├── dbt_project.yml
 ├── requirements.txt
 └── README.md
 ```
 
-## Running
+## Project Status
+
+| Component | Status |
+|---|---|
+| SECOM data preparation | Implemented |
+| Python event producer | Implemented |
+| Kafka event streaming | Implemented |
+| Spark Structured Streaming | Implemented |
+| PostgreSQL persistence | Implemented |
+| SPC three-sigma detection | Implemented |
+| Batch processing metrics | Implemented |
+| dbt staging models | Implemented |
+| dbt intermediate models | Implemented |
+| dbt analytical marts | Implemented |
+| dbt data tests | Implemented |
+| Power BI dashboard | Planned |
+| Full-dataset processing and benchmarking | Pending |
+| Final end-to-end validation | Pending |
+
+## Future Improvements
+
+- Complete the Power BI dashboard.
+- Process the full SECOM dataset.
+- Benchmark pipeline throughput and latency.
+- Perform final end-to-end validation.
+- Document experimental results and performance findings.
+
+## Learning Objectives
+
+This project explores practical data engineering concepts, including event-driven architectures, stream processing, distributed data transformation, relational data modeling, data quality testing, statistical process control, and pipeline performance evaluation.
